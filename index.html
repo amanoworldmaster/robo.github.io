@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="engt">
+<head>
+<title>ROBO</title>
+    <link rel="stylesheet" href="./css/style.css">
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+                       <meta name="viewport" content="width=device-width, initial-scale=1" />        
+        <script src='https://code.responsivevoice.org/responsivevoice.js'></script> 
+        <style>
+        #reply{
+        				float: right;
+        				padding:5px;
+        				color:#fff;
+        				text-align: center;
+        				background-color:#09f;
+        				border:0px;
+        				border-radius:5%;
+        				}
+        </style>
+</head>
+<body>
+<button id="reply" onclick="reply()" >Repeat</button>
+<iframe  src="" id="frame" ></iframe>
+<div id="main">
+     <div id="head">
+          <div id="face">
+              <div id="leye"></div>
+              <div id="reye"></div>
+              <div class="mouth"></div>
+          </div>
+          <div id="lear"></div>
+          <div id="rear"></div>
+     </div>
+     <div id="neck"></div>
+    
+     <div id="body">
+              <div id="dot">• • •</div>
+              <div id="name">MANO</div>
+           <div id="lhand"></div>
+           <div id="rhand"></div>
+       <div id="screen" onclick="ff()"> 
+       <p id="content" > Hii I am MANO Robot
+       </p>
+       
+      
+       </div>
+</div>
+     </div>
+
+        <input id="input" placeholder="Chat with me" onclick="hide()">
+        <button id="bu" onclick="a()"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+
+ <script>
+ 
+ var ne=prompt("Enter your name:");
+window.onload = function(){
+    responsiveVoice.speak("hey i m mano robot. ","US English Female",{rate:0.9,volume:1,pitch:0.9});
+};
+function a(){
+var ans = document.getElementById("input").value.toLowerCase();
+        if(ans.match("hello") || ans.match("hi") ||ans.match("hii")||ans.match("hey") )
+   {
+       b="Hello, how are you "+ne;   
+       c=b;    
+   }   
+   else if(ans.match("fine") || ans.match("good"))
+   {
+       c="Ok!!"  ;   
+        b="0k"; 
+   }  
+       else if(ans.match("facebook") || ans.match("instagram"))
+   {
+       b="we try" ;   
+        c=b; 
+   }   
+   else if(ans.match("your name") || ans.match("ur name")|| ans.match("who r u")|| ans.match("who are you"))
+   {
+       b="I am mano robot";
+       c=b; 
+   }   
+   else if(ans.match("owner") || ans.match("created")||ans.match("who made you") )
+   {
+   				document.getElementById("reply"). style.display="none"; 				  
+       b="I was created by, Amano world master ,Aman Singh.";
+ document.getElementById("frame"). style.display="inline";      document.getElementById("frame").src="./img/founder.jpg";
+       c=b; 
+   }      
+   else if(ans.match("how are you")||ans.match("how r u") )
+   {
+       b="I am feeling well because you are talking to me,  You are such a nice person .";
+       c=b; 
+  }   
+   else if(ans.match("do you know me"))
+   {
+       b="You are my sir and i am your robot";
+       c=b; 
+   } 
+   else if(ans.match("what you can do"))
+   {
+       b="I can help you to searching anything from google and also help you to give your answer.";
+       c=b; 
+   }        
+   else if(ans.match("u live") ||ans.match("where you live"))
+   {
+       b="I live with you in your phone forever.";
+       c=b; 
+   }   
+   else if(ans.match("what are you doing") ||ans.match("youu doing") )
+   {
+       b="I am just helping you Mr."+ne;
+       c=b; 
+   }   
+   else if(ans.match("fine"))
+   {
+       b="Good";
+       c=b; 
+   }   
+   else if(ans.match("u like")||ans.match("you like me") )
+   {
+       b="Yes,sir";
+       c=b; 
+   }   
+   else if(ans.match("you are my friend") || ans.match("friend"))
+   {
+       b="Yes i am your friend"+ne;
+       c=b; 
+   }   
+   else if(ans.match("whats going on"))
+   {
+       b="Nothing";
+       c=b; 
+   }   else if(ans.match("teach abcd") ||ans.match("abcd"))
+   {
+       c="<b>Capital Letter</b><br>A  B  C  D  E  F  G  H  I  J K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z.<br><br><b>Small Letter</b><br>a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r s  t  u  v  w  x  y  z<br><br><b>Vowel</b><br>Aa  Ee  Ii   Oo  Uu<br><br><b>Consonant</b><br>Bb  Cc  Dd  Ff  Gg  Hh  Jj  Kk  Ll  Mm  Nn  Pp  Qq  Rr  Ss  Tt  Vv  Ww  Xx  Yy  Zz.";
+       
+       b="A  B  C  D  E  F  G  H  I  J K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z."; 
+   }   
+      else if(ans.match("tell me time") || ans.match("time") )
+   {
+   				var t=new Date();
+var h=t.getHours();
+var m=t.getMinutes();
+var s=t.getSeconds(); 
+if(h>12)
+{
+				h=h-12;
+				}
+b= h+":"+m+":"+s;
+c=b; 
+   }
+       else if(ans.match("today is my birthday") || ans.match("birthday"))
+   {
+     b="Happy Birthday My Dear friend, Happy Birthday to you,🎂 for "+ne;
+     c=b; 
+   }    
+   else if(ans.match("hobbies") ||ans.match("your hobbies")  )
+   {
+     b="Helping other people,Dancing ,Singing are my hobbies.";
+     c=b; 
+   }   
+    else if(ans.match("thank you") ||ans.match("thnx")  )
+   {
+     b="Your Welcome"+ne;
+     c=b; 
+   }
+    else if(ans.match("math") ||ans.match("123")  )
+   {
+     b="1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,16 ,17 ,18 ,19 ,20 ,21 ,22 ,23 ,24 ,25 ,26 ,27 ,28 ,29 ,30 ,31 ,32 ,33 ,34 ,35 ,36 ,37 ,38 ,39 ,40 ,41 ,42 ,43 ,44 ,45 ,46 ,47 ,48 ,49 ,50 ,51 ,52 ,53 ,54 ,55 ,56 ,57 ,58 ,59 ,60 ,61 ,62 ,63 ,64 ,65 ,66 ,67 ,68 ,69 ,70 ,71 ,72 ,73 ,74 ,75 ,76 ,77 ,78 ,79 ,80 ,81 ,82 ,83 ,84 ,85 ,86 ,87 ,88 ,89 ,90 ,91 ,92 ,93 ,94 ,95 ,96 ,97 ,98 ,99 ,100.";
+     c=b; 
+   }   
+    else if(ans.match("chilli") ||ans.match("marcha")  )
+   {
+     b="Oh!! no don't eat me.";
+     c=b; 
+   }          
+      else if(ans.match("can you help me") ||ans.match("help")  )
+   {
+     b="Yes,I try to do.";
+     c=b; 
+   }   
+   else if(ans.match("good") || ans.match("awesome") || ans.match("wonderful") || ans.match("outstanding") || ans.match("brilliant") || ans.match("nice")||ans.match("yes"))
+   {
+       b="Thanks,You like my work";
+       c=b; 
+   }
+   else if(ans.match("what is your age")|| ans.match("your age")  || ans.match("old are you")|| ans.match("old r u"))
+   {
+     b="I have no idea.";
+     c=b; 
+   }   
+   else if(ans.match("ok") || ans.match("ohk") || ans.match("okay") )
+   {
+       b="👍";
+       c=b; 
+   }  
+    else if(ans.match("you can sing") || ans.match("song")|| ans.match("sing a song"))
+   {
+      b="Suno Gaur Se Duniya Walon Buri Nazar Naa Humpe Dalo Chahe Jitna Jor Laga Lo Sabse Aage Honge Hindustani";
+      c=b; 
+   } 
+   else if(ans.match("about myself") || ans.match("about me"))
+   {
+      b="Wonderful, you are best fried";
+      c=b; 
+   } 
+   else if(ans.match("alphabet") || ans.match("apple boy"))
+   {
+      c="A for 🍎<br>B for 👨<br>C for 🐈<br>D for 🐕<br>E for 🐘<br>F for 🐬<br>G for 👧 <br>H for 🐓<br>I for ✒️<br>J for ⚱️<br>K for 🤴<br>L for 🦁<br>M for 🐒<br>N for 📰<br>O for 🍊<br>P for 🐦<br>Q for 👸<br>R for 🐀<br>S for ☀️<br>T for 🐅<br>U for ☂️<br>V for 🚌<br>W for ⏱️<br>X for 🎄<br>Y for ⛵<br>Z for 🦓";
+      
+      b="A for apple B for boy C for cat D for dog E for elephant F for fish G for girl  H for hen I for ink J for jar K for king L for lion M for monkey N for news O for orange P for parrot Q for queen R for rat S for sun T for tiger U for umbrella V for van W for watch X for xmas tree Y for yoke Z for zebbra"; 
+   }    
+   else if(ans.match("color name") || ans.match("color"))
+   {
+      c="<b>Color Name</b><br><ol><li>Red</li><li>Black</li><li>White</li><li>Green</li><li>Pink</li><li>Yellow</li><li>Blue</li></ol>";
+
+           b="Red Black  White Green  Pink Yellow Blue";
+    }     
+   else if(ans.match("week name") || ans.match("week"))
+   {
+      c="<b>Week Name</b><br><ol><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Thursday</li><li>Friday</li><li>Saturday</li><li>Sunday</li></ol>";
+
+           b="Monday Tuesday  Wednesday Thursday  Friday Saturday Sunday";
+    }  
+   else if(ans.match("month name") || ans.match("month"))
+   {
+      c="<b>Month Name</b><br><ol><li>January</li><li>February</li><li>March</li><li>April</li><li>May</li><li>June</li><li>July</li><li>August</li><li>September</li><li>October</li><li>November</li><li>December</li></ol>";
+
+           b="January  February March April May June July August September October November December";
+    }     
+        
+   else if(ans.match("can you cry") || ans.match("cry"))
+   {
+      b="I cry when you don't understand me or i don't understand you.";
+      c=b; 
+   } 
+   else if(ans.match("who is your father"))
+   {
+      b="I am machine,but sir Aman Singh is my father because he built me.";
+      c=b; 
+   } 
+   else if(ans.match("can i change your name"))
+   {
+      b="Sorry you can't change my name.";
+      c=b; 
+   } 
+   else if(ans.match("what is my name") || ans.match("my name"))
+   {
+      b="Your name is"+ne;
+      c=b; 
+   }    
+  else {
+  				 						document.getElementById("reply"). style.display="none";
+  b="Searching on Google.See at the top";
+  c=b;
+  document.getElementById("frame"). style.display="inline";
+  	document.getElementById("frame").src="https://www.google.com/search?igu=1&source=hp&ei=4qIKX9aEIrTC3LUPhZuPiAo&q="+(ans)+"&gs_lcp=ChFtb2JpbGUtZ3dzLXdpei1ocBADMgIIADICCC4yAgguMgIIADICCC4yAggAMgIIADICCAA6AggpOgQIKRBHOggIABCxAxCDAToFCC4QsQM6BQgAELEDUPd6WLGPAWDikwFoAHAAeACAAaACiAGmCpIBAzItNZgBAKABAbABDw&sclient=mobile-gws-wiz-hp";
+   //b="Sorry,I can't understand you";  
+   };   
+    responsiveVoice.speak(b,"US English Female",{rate:0.9,volume:1,pitch:1});
+ document.getElementById("content").innerHTML=c; document.getElementById("input").value = "";
+   }
+   
+   function ff(){
+ 				responsiveVoice.speak("haha haha","UK English Female",{rate:0.9,volume:1,pitch:0.9});
+ 			}
+ 			
+ 			function hide(){
+ 							document.getElementById("reply"). style.display="block"; 				  
+ 						document.getElementById("frame"). style.display="none";
+						
+ 							}
+ 							
+function reply(){
+				var reply=document.getElementById("input").value;
+				responsiveVoice.speak(reply,"UK English Female",{rate:0.9,volume:1,pitch:0.9});
+				document.getElementById("input").value = "";
+				
+				}							
+</script>
+</body>
+</html>
