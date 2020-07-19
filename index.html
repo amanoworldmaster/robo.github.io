@@ -54,7 +54,7 @@
  
  var ne=prompt("Enter your name:");
 window.onload = function(){
-    responsiveVoice.speak("hey i m mano robot. ","US English Female",{rate:0.9,volume:1,pitch:0.9});
+    responsiveVoice.speak("Mano robot mai aapka swagat hai. ek kadam Aatma nirbhar ki taraf","Hindi Female",{rate:0.9,volume:1,pitch:0.9});
 };
 function a(){
 var ans = document.getElementById("input").value.toLowerCase();
@@ -66,8 +66,18 @@ var ans = document.getElementById("input").value.toLowerCase();
    else if(ans.match("fine") || ans.match("good"))
    {
        c="Ok!!"  ;   
-        b="0k"; 
+        b="ok"; 
    }  
+   else if(ans.match("country") || ans.match("india"))
+   {
+       c="<h1>🇮🇳</h1>"  ;   
+        b="Aatmanirbhar India"; 
+   }     
+    else if(ans=="")
+   {
+       b="Please write something."  ;   
+        c=b; 
+   }    
        else if(ans.match("facebook") || ans.match("instagram"))
    {
        b="we try" ;   
@@ -196,6 +206,7 @@ c=b;
     else if(ans.match("you can sing") || ans.match("song")|| ans.match("sing a song"))
    {
       b="Suno Gaur Se Duniya Walon Buri Nazar Naa Humpe Dalo Chahe Jitna Jor Laga Lo Sabse Aage Honge Hindustani";
+      						
       c=b; 
    } 
    else if(ans.match("about myself") || ans.match("about me"))
@@ -261,7 +272,7 @@ c=b;
    }
    
    function ff(){
- 				responsiveVoice.speak("haha haha","UK English Female",{rate:0.9,volume:1,pitch:0.9});
+ 				responsiveVoice.speak("haha haha","US English Female",{rate:0.9,volume:1,pitch:0.9});
  			}
  			
  			function hide(){
